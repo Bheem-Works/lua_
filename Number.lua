@@ -14,4 +14,4 @@
     print(math.floor(10.22022)) -- it gives the rounded values; 
     print(math.sin(19));
     print(math.abs(29.3883));
-    
+    print(math.deg(3));
