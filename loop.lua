@@ -18,9 +18,25 @@
 
     -- While loops in the lua 
 
-    local bottle = 10; 
-    
-    while bottle > 0  do
-    bottle = bottle - 1; 
-    print("We have this much bottle" .. bottle);
+    local bottle = true; 
+    local runTime = 0;
+    while bottle  do
+        print("Running")
+    if runTime == 10 then
+    bottle = false 
     end
+
+    runTime = runTime + 1;
+    end
+
+    -- Do While loops 
+    local x = 11; 
+    repeat
+        print("This is repeating;")
+        x = x + 1
+    until x > 10 
+
+
+    repeat
+        
+    until false; -- false conditions; 
