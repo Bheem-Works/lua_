@@ -36,6 +36,6 @@ local user_loop = io.write("Enter the number:");
 local user_loop_read = io.read();
 print(user_loop_read);
 
-for i = user_loop_read, 1 do 
-  print(i)
+for i = 1, #user_loop_read do 
+  print(user_loop_read[i]);
 end;
