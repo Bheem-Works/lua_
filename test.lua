@@ -20,21 +20,15 @@ name("vim")
 -- Problem : how can i get the value like the 0,1, If i am having the parameter value of the 2; 
 local function fabinci(n) 
   local fabi = {0,1} -- value store cha yesma; 
-  for i = 2, n-1 do -- am i getting the n value?? (need to check the n value;)
-  fabi[i + 1] = fabi[i] + fabi[i - 1]  -- Yo run executer vako cha kih nai??  
+  for i = 2, n-1 do -- done n - 1 = to get the value like the 0,1; coz it minu with the n value; 
+  fabi[i + 1] = fabi[i] + fabi[i - 1]  -- naya value add grna ko lagi previouse maan;  
   end
   return fabi;
 end
 
+-- The value comes in the table form for show the output we have to use the loops. 
 local show_fabi = fabinci(2)
-for _,value in ipairs(show_fabi) do 
+for _,value in ipairs(show_fabi) do -- to get the value through from the loops.  
   print(value)
 end
 
--- local function param_value(n) 
---   for i = 1, n do 
---     print(i)
---   end
--- end
-
--- param_value(3)
