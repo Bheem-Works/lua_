@@ -18,17 +18,30 @@ name("vim")
 
 -- fabincii sequence 
 -- Problem : how can i get the value like the 0,1, If i am having the parameter value of the 2; 
-local function fabinci(n) 
-  local fabi = {0,1} -- value store cha yesma; 
-  for i = 2, n-1 do -- done n - 1 = to get the value like the 0,1; coz it minu with the n value; 
-  fabi[i + 1] = fabi[i] + fabi[i - 1]  -- naya value add grna ko lagi previouse maan;  
+-- local function fabinci(n) 
+--   local fabi = {0,1} -- value store cha yesma; 
+--   for i = 2, n-1 do -- done n - 1 = to get the value like the 0,1; coz it minu with the n value; 
+--   fabi[i + 1] = fabi[i] + fabi[i - 1]  -- naya value add grna ko lagi previouse maan;  
+--   end
+--   return fabi;
+-- end
+
+
+-- fibancii in by using the functions in the lua.Explaination with the code;
+local function fabinacii(n) 
+  -- craeate a varaible and store the tables; 
+  local fabi = {0,1}; -- Giving the intial value; 
+  for i = 2, n - 1 do  -- ahh.. There is the n - 1. which means the value will be minus and give the value by single unit; 
+    fabi[i + n] = fabi[i] + fabi[i - 1] -- We hav to move to the next index and give the value; 
   end
-  return fabi;
+  return fabi
 end
 
--- The value comes in the table form for show the output we have to use the loops. 
-local show_fabi = fabinci(2)
-for _,value in ipairs(show_fabi) do -- to get the value through from the loops.  
+local storeFabi = fabinacii(2)
+
+-- to show the outputs by using the loops because the output numbers will come in the index;
+for _,value in pairs(storeFabi) do 
   print(value)
-end
+end;
 
+-- I have changed something's so yeh you can see what i have changed i will higlight that. 
