@@ -58,8 +58,12 @@ print(increment_counter())
 
 -- table form functions; 
 local function table (...) -- whatever value is passed it returns that value; 
-  print(...);
-
+  local sum = 0; 
+  -- print(...);
+  for key,value in pairs({...}) do 
+    sum = sum + value;
+    return sum; 
+  end; 
 end;
 
-print(table(1,2,3,4,5));
+print(table(1,2,3,4,5))
