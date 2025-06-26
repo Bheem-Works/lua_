@@ -12,3 +12,14 @@ local routine_1 = coroutine.create(
     end
   end
 )
+
+local routine_func = function () 
+  for i = 11,20 do
+    print("couritine2"...i)
+  end
+end
+
+local routine_3 = coroutine.create(routine_func)
+
+-- coroutine.resume(routine_3)
+coroutine.(coroutine.status(routine_1))
