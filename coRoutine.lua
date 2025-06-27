@@ -34,11 +34,35 @@ print(coroutine.resume(co)) -- here it brihg's what is your name.
 print(coroutine.resume(co,"vim"))
 
 
-local function bottle()
-  print("This is the bottle man")
-  coroutine.yeild();
-  print("this is not the bottle")
+-- steve chapter 11 curoutine; 
+local routine_1 = coroutine.create(
+  function() 
+    for i = 1,10,1 do 
+      print(i)
+
+      if i == 5 then 
+        coroutine.yeild();
+      end
+    end
+  end
+)
+
+
+local routine_func = function () 
+  for i = 11, 20 do 
+    print("(routine 2),"..i)
+  end
 end
 
-local bo = coroutine.create(bottle)
-print(bo.resume());
+-- We have to use the coroutine.resume() to starts it again. and again. 
+local routine_2 = coroutine.create(routine_func);
+coroutine.resume(routine_1) -- resuming it aagin and again. 
+print(coroutine.status(routine_1)) -- suspend means it is not working. 
+print(coroutine.resume(routine_1))
+print(coroutine.status(routine_1))
+print(coroutine.resume(routine_2))
+
+-- Checking if the status is suspend then execute it. to find out it is working or not. 
+-- if coroutine.status(routine_1) === "suspend" then 
+--   coroutine.resume(routine_1)
+-- end;
