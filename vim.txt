@@ -1,0 +1,2 @@
+Hello, this is some text written to mom.txt!
+this is the changable text
