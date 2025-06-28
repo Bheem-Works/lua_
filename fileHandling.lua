@@ -4,17 +4,10 @@
 io.output("vim.txt")
 
 -- Write something to the file
-io.write("Hello, this is some text written to mom.txt!\n")
-
+io.write("this is not the right time") -- it overwrite the file. 
+local file = io.read(5)
 -- Close the file
 io.close()
 
--- The vs code is pretty slow haha why?? 
+print(file)
 
--- append mode; 
--- "w" write mode; 
--- "r" read mode;
--- "a" append mode;
-local file = io.open("vim.txt","a") -- for apppend;
-file:write("this is the changable text")
-file:close();
