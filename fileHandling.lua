@@ -14,9 +14,13 @@ io.close()
 print(file)
 
 -- File handling code by documentations.
+
 -- The methods of the file hanlding; 
 -- output() to make the file. 
 -- input() to enter the file. 
 -- read() to read the file.
 -- write() to write the file.
 -- close() to close the file. 
+-- "w" to overwrite the text.
+-- "*number" ---> it only read the numbers; 
+-- "*all" ---> it read all the numbers;
