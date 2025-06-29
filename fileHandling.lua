@@ -24,3 +24,6 @@ print(file)
 -- "w" to overwrite the text.
 -- "*number" ---> it only read the numbers; 
 -- "*all" ---> it read all the numbers;
+
+-- Here is the links of the methods; 
+------> https://www.tutorialspoint.com/lua/lua_file_io.html
