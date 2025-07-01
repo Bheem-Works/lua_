@@ -12,6 +12,11 @@ print(os.time({
 -- print(os.execute("whoami"))
 -- print(os.execute("cls"))
 
+-- To get the path of the file we have to use the 
+-- getenv,tmpname;
+io.write('The path is..',os.getenv("PATH"),"\n")
+io.write("The temp file name is",os.tmpname(),"\n")
+
 -- How to know how much the code take time to run 
 local start = os.clock();
 
@@ -28,3 +33,7 @@ for i = 1, 10, 1 do
    os.exit() -- it will entirely exit os system.
    end
 end
+
+-- Os module lua from the toturials and more about the os module for the lua
+
+io.write("This is the operating system")
