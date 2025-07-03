@@ -35,3 +35,22 @@ local function dog(name,breed)
 end
 
 local dogCall = dog("mizo","puppie")
+
+
+local name = function ()
+ print("this is the print one user one. ") 
+end
+
+print(name())
+
+local storeObjectData = {
+  naam = "bhada",
+  prayok = "karkhana",
+  price = "jati vaienih kine haina"
+}
+
+local function acessSotreObjectData()
+ return storeObjectData.naam
+end
+
+print(acessSotreObjectData())
