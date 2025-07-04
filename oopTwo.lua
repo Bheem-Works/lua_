@@ -6,3 +6,17 @@
 -- Here is the simple examples. 
 
 car = {}
+
+function car:new(brand)
+  local obj = {car == car}
+  setMetatable(obj,self)
+  self._index = self
+  return obj
+end
+
+function car:drive() 
+  print("i am driving this ",self.brand)
+end
+
+local myCar = car:new("toyata")
+myCar:drive();
