@@ -19,23 +19,43 @@
 -- : self objects pathaunu ra access grnu milcha. But '.' use grda chai self pathaunu mildaina.
 
 
-local savedName = {
-  name = "juillet",
-  class = "don'w know",
-  status = "poor",
-  obj = {
-mobile = "andriod4"
-  }
-}
+-- local savedName = {
+--   name = "juillet",
+--   class = "don'w know",
+--   status = "poor",
+--   obj = {
+-- mobile = "andriod4"
+--   }
+-- }
 
 function Pet(name)
   name = name or "miso"
   return {
-    name = name
+    name = name,
+    status = "poor",
+    feed = function (self)
+    self.status = "rich"
+  end
   }
 end
 
-local callName = savedName;
-local callPet = Pet()
-print(callPet.name)
-print(callName.class)
+local function Dog(name,breed) 
+  local dog = Pet(name)
+  dog.breed = breed
+  dog.loyalty = 0
+
+  dog.isLoyal = function (self)
+    return self.loyalty >= 10
+  end
+
+  dog.bark = function (self)
+    print("woof, woof, i am a dog!")
+  end
+
+  return dog
+end
+
+local d = Dog("charle","lusix")
+print(d.breed)
+print(d.name)
+d:bark()
