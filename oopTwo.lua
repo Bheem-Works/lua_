@@ -47,7 +47,11 @@ local function Dog(name,breed)
   dog.isLoyal = function (self)
     return self.loyalty >= 10
   end
-
+  
+  dog.feed = function (self)
+    self.status = "rich"
+    self.loyal = self.loyalty + 5
+  end
   dog.bark = function (self)
     print("woof, woof, i am a dog!")
   end
@@ -59,3 +63,9 @@ local d = Dog("charle","lusix")
 print(d.breed)
 print(d.name)
 d:bark()
+d:feed()
+if d:isLoyal() then 
+  print("Nice my dog you are loyal to me. haha")
+else 
+  print("Oh No you are not loyal to me.")
+end
